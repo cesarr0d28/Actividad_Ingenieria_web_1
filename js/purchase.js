@@ -4,6 +4,11 @@ var purchasesContainer = document.getElementById('purchases');
 
 purchases.forEach(function(purchase, index) {
     var purchaseContainer = document.createElement('div');
+    purchaseContainer.className = 'purchase-container';
+
+    var purchaseImage = document.createElement('img');
+    purchaseImage.src = purchase.image;
+    purchaseContainer.appendChild(purchaseImage);
 
     var purchaseName = document.createElement('span');
     purchaseName.textContent = purchase.name;
